@@ -34,9 +34,9 @@ static  IplImage* doCanny(IplImage* img, double lowThresh,double highThresh,
 		return img_out;
 
 }
-int main(){
+int main(int argc,char* argv[]){
 
-	IplImage *img = cvLoadImage("C:\\Users\\Yajun Dou\\Desktop\\transmit\\test.jpg");
+	IplImage *img = cvLoadImage(argv[1]);
 	IplImage *img1 = dopyrDown(img,IPL_GAUSSIAN_5x5);
 	IplImage *img2 =  dopyrDown(img1,IPL_GAUSSIAN_5x5);
 	IplImage *gray = cvCreateImage(cvSize(img2->width,img2->height),8,1);
