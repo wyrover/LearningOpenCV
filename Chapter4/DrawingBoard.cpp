@@ -1,5 +1,4 @@
-//Check the IPP library if installed and works fine. if print Modules 
-//is none,the IPP not installed.
+//Create Draw Board
 #include <opencv/highgui.h>
 #include <opencv/cv.h>
 
@@ -10,7 +9,7 @@ void my_mouse_callback(int event_t,int x, int y,int flags,void *param);
 
 static void draw_box(IplImage* img,CvRect rect){
 	cvRectangle(img,cvPoint(box.x,box.y),cvPoint(box.x+ box.width,box.y+box.height),
-		cvScalar(0xff,0x00,0x00)
+		cvScalar(0xff,0x00,0x00) //box with BLUE line edge
 		);
 }
 
